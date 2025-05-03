@@ -3,4 +3,6 @@
     <string name="app_name">Asesment2</string>
     <string name="list_kosong">Belum ada data</string>
     <string name="x_diklik">%1$s diklik!</string>
+    <string name="tambah_produk">Tambah produk</string>
+    <string name="belum_bisa">Belum bisa tambah produk.</string>
 </resources>
