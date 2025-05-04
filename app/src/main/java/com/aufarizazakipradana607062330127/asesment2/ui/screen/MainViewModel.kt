@@ -77,4 +77,8 @@ class MainViewModel : ViewModel(){
             "Speaker"
         )
     )
+
+    fun getProduk(id: Long): KelolaProduk? {
+        return data.find { it.id == id}
+    }
 }
