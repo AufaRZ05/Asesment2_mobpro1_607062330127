@@ -39,4 +39,10 @@ class DetailViewModel(private val dao: KelolaProdukDao) : ViewModel() {
             dao.update(kelolaProduk)
         }
     }
+
+    fun delete(id: Long) {
+        viewModelScope.launch(Dispatchers.IO) {
+            dao.deleteById(id)
+        }
+    }
 }

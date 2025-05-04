@@ -14,4 +14,6 @@
     <string name="simpan">Simpan</string>
     <string name="edit_produk">Ubah produk</string>
     <string name="invalid">nama merek, harga, stok, dan kategori tidak boleh kosong.</string>
+    <string name="lainnya">Opsi lainnya</string>
+    <string name="hapus">Hapus produk</string>
 </resources>

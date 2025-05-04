@@ -21,4 +21,7 @@ interface KelolaProdukDao {
 
     @Query("SELECT * FROM kelolaProduk WHERE id = :id")
     suspend fun getProdukById(id: Long): KelolaProduk?
+
+    @Query("DELETE FROM kelolaProduk WHERE id = :id")
+    suspend fun deleteById(id: Long)
 }

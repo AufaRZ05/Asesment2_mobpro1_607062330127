@@ -15,4 +15,6 @@
     <string name="kembali">Kembali</string>
     <string name="edit_produk">Ubah produk</string>
     <string name="invalid">nama merek, harga, stok, dan kategori tidak boleh kosong.</string>
+    <string name="hapus">Hapus produk</string>
+    <string name="lainnya">Opsi lainnya</string>
 </resources>
