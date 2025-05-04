@@ -18,4 +18,7 @@ interface KelolaProdukDao {
 
     @Query("SELECT * FROM kelolaProduk ORDER BY namaMerek ASC")
     fun getProduk(): Flow<List<KelolaProduk>>
+
+    @Query("SELECT * FROM kelolaProduk WHERE id = :id")
+    suspend fun getProdukById(id: Long): KelolaProduk?
 }

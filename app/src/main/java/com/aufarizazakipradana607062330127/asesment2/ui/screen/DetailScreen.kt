@@ -95,10 +95,14 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
                             Toast.makeText(context, R.string.invalid, Toast.LENGTH_LONG).show()
                             return@IconButton
                         }
+
+                        val hargaInt = harga.toIntOrNull() ?: 0
+                        val stokInt = stok.toIntOrNull() ?: 0
+
                         if (id == null) {
-                            val hargaInt = harga.toIntOrNull() ?: 0
-                            val stokInt = stok.toIntOrNull() ?: 0
                             viewModel.insert(namaMerek, hargaInt, stokInt, kategori)
+                        } else {
+                            viewModel.update(id, namaMerek, hargaInt, stokInt, kategori)
                         }
                         navController.popBackStack()
                     }) {

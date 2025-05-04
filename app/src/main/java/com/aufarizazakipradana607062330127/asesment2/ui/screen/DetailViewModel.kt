@@ -22,7 +22,21 @@ class DetailViewModel(private val dao: KelolaProdukDao) : ViewModel() {
         }
     }
 
-    fun getProduk(id: Long): KelolaProduk? {
-        return null
+    suspend fun getProduk(id: Long): KelolaProduk? {
+        return dao.getProdukById(id)
+    }
+
+    fun update(id: Long, namaMerek: String, harga: Int, stok: Int, kategori: String) {
+        val kelolaProduk = KelolaProduk(
+            id = id,
+            namaMerek = namaMerek,
+            harga = harga,
+            stok = stok,
+            kategori = kategori
+        )
+
+        viewModelScope.launch(Dispatchers.IO) {
+            dao.update(kelolaProduk)
+        }
     }
 }
