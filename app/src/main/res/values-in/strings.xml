@@ -17,4 +17,7 @@
     <string name="invalid">nama merek, harga, stok, dan kategori tidak boleh kosong.</string>
     <string name="hapus">Hapus produk</string>
     <string name="lainnya">Opsi lainnya</string>
+    <string name="tombol_batal">Batal</string>
+    <string name="pesan_hapus">Hapus catatan ini?</string>
+    <string name="tombol_hapus">Hapus</string>
 </resources>

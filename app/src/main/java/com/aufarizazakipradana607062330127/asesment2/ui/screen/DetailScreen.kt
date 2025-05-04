@@ -59,6 +59,7 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
     var harga by remember { mutableStateOf("") }
     var stok by remember { mutableStateOf("") }
     var kategori by remember { mutableStateOf("") }
+    var showDialog by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
         if (id == null) return@LaunchedEffect
@@ -116,8 +117,7 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
                     }
                     if (id != null) {
                         DeleteAction {
-                            viewModel.delete(id)
-                            navController.popBackStack()
+                            showDialog = true
                         }
                     }
                 }
@@ -135,6 +135,15 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
             onCategoryChange = { kategori = it },
             modifier = Modifier.padding(padding)
         )
+
+        if (id != null && showDialog) {
+            DisplaAlertDialog(
+                onDismissRequest = { showDialog = false }) {
+                showDialog = false
+                viewModel.delete(id)
+                navController.popBackStack()
+            }
+        }
     }
 }
 
