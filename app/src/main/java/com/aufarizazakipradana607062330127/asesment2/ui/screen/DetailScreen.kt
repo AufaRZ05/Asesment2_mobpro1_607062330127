@@ -39,9 +39,11 @@ import androidx.navigation.compose.rememberNavController
 import com.aufarizazakipradana607062330127.asesment2.R
 import com.aufarizazakipradana607062330127.asesment2.ui.theme.Asesment2Theme
 
+const val KEY_ID_KELOLAPRODUK = "idKelolaProduk"
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DetailScreen(navController: NavHostController) {
+fun DetailScreen(navController: NavHostController, id: Long? = null) {
     var namaMerek by remember { mutableStateOf("") }
     var harga by remember { mutableStateOf("") }
     var stok by remember { mutableStateOf("") }
@@ -60,7 +62,10 @@ fun DetailScreen(navController: NavHostController) {
                     }
                 },
                 title = {
-                    Text(text = stringResource(id = R.string.tambah_produk))
+                    if (id == null)
+                        Text(text = stringResource(id = R.string.tambah_produk))
+                    else
+                        Text(text = stringResource(id = R.string.edit_produk))
                 },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
