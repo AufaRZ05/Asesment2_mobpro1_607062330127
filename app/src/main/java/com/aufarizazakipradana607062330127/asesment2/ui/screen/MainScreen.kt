@@ -32,15 +32,16 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.aufarizazakipradana607062330127.asesment2.R
 import com.aufarizazakipradana607062330127.asesment2.model.KelolaProduk
+import com.aufarizazakipradana607062330127.asesment2.navigation.Screen
 import com.aufarizazakipradana607062330127.asesment2.ui.theme.Asesment2Theme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainScreen(){
-    val context = LocalContext.current
-
+fun MainScreen(navController: NavHostController){
     Scaffold (
         topBar = {
             TopAppBar(
@@ -56,7 +57,7 @@ fun MainScreen(){
         floatingActionButton = {
             FloatingActionButton(
                 onClick = {
-                    Toast.makeText(context, R.string.belum_bisa, Toast.LENGTH_SHORT).show()
+                    navController.navigate(Screen.FormBaru.route)
                 }
             ) {
                 Icon(
@@ -136,6 +137,6 @@ fun ListItem(kelolaProduk: KelolaProduk, onClick: () -> Unit) {
 @Composable
 fun MainScreenPreview() {
     Asesment2Theme {
-        MainScreen()
+        MainScreen(rememberNavController())
     }
 }

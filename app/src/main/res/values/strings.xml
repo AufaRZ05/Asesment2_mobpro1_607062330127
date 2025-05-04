@@ -3,7 +3,6 @@
     <string name="list_kosong">Belum ada data</string>
     <string name="x_diklik">%1$s diklik!</string>
     <string name="tambah_produk">Tambah produk</string>
-    <string name="belum_bisa">Belum bisa tambah produk.</string>
     <string name="nama_merek">Nama merek</string>
     <string name="harga">Harga</string>
     <string name="stok">Stok</string>
@@ -11,4 +10,6 @@
     <string name="lampu">Lampu</string>
     <string name="kipas_angin">Kipas angin</string>
     <string name="speaker">Speaker</string>
+    <string name="kembali">Kembali</string>
+    <string name="simpan">Simpan</string>
 </resources>
