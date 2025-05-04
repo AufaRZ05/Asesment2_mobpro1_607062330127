@@ -1,0 +1,20 @@
+package com.aufarizazakipradana607062330127.asesment2.util
+
+import android.content.Context
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import com.aufarizazakipradana607062330127.asesment2.database.KelolaProdukDb
+import com.aufarizazakipradana607062330127.asesment2.ui.screen.MainViewModel
+
+class ViewModelFactory (
+    private val context: Context
+) : ViewModelProvider.Factory {
+    @Suppress("unchecked_cast")
+    override fun <T: ViewModel> create(modelClass: Class<T>): T {
+        val dao = KelolaProdukDb.getInstance(context).dao
+        if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
+            return MainViewModel(dao) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}
