@@ -14,4 +14,5 @@
     <string name="simpan">Simpan</string>
     <string name="kembali">Kembali</string>
     <string name="edit_produk">Ubah produk</string>
+    <string name="invalid">nama, harga, stok, dan kategori tidak boleh kosong.</string>
 </resources>

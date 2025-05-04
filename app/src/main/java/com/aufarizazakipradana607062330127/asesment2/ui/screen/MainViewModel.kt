@@ -15,8 +15,4 @@ class MainViewModel(dao: KelolaProdukDao) : ViewModel() {
         started = SharingStarted.WhileSubscribed(),
         initialValue = emptyList()
     )
-
-    fun getProduk(id: Long): KelolaProduk? {
-        return data.value.find { it.id == id }
-    }
 }
