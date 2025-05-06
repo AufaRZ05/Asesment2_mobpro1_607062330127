@@ -59,6 +59,7 @@ import kotlinx.coroutines.launch
 fun MainScreen(navController: NavHostController){
     val dataStore = SettingsDataStore(LocalContext.current)
     val showList by dataStore.layoutFlow.collectAsState(true)
+    val isDarkTheme by dataStore.themeFlow.collectAsState(initial = false)
 
     Scaffold (
         topBar = {
@@ -71,6 +72,18 @@ fun MainScreen(navController: NavHostController){
                     titleContentColor = MaterialTheme.colorScheme.primary
                 ),
                 actions = {
+                    IconButton(onClick = {
+                        CoroutineScope(Dispatchers.IO).launch {
+                            dataStore.saveTheme(!isDarkTheme)
+                        }
+                    }) {
+                        Icon(
+                            painter = painterResource(id = R.drawable.baseline_color_lens_24),
+                            contentDescription = stringResource(R.string.ganti_tema),
+                            tint = MaterialTheme.colorScheme.primary
+                        )
+                    }
+
                     IconButton(onClick = {
                         CoroutineScope(Dispatchers.IO).launch {
                             dataStore.saveLayout(!showList)

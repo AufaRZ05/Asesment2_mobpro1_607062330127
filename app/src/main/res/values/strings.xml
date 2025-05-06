@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Asesment2</string>
+    <string name="app_name">Listrik Broto</string>
     <string name="list_kosong">Belum ada data</string>
     <string name="x_diklik">%1$s diklik!</string>
-    <string name="tambah_produk">Tambah produk</string>
+    <string name="tambah_produk">Tambah Produk</string>
     <string name="nama_merek">Nama merek</string>
     <string name="harga">Harga</string>
     <string name="stok">Stok</string>
@@ -12,7 +12,7 @@
     <string name="speaker">Speaker</string>
     <string name="kembali">Kembali</string>
     <string name="simpan">Simpan</string>
-    <string name="edit_produk">Ubah produk</string>
+    <string name="edit_produk">Ubah Produk</string>
     <string name="invalid">nama merek, harga, stok, dan kategori tidak boleh kosong.</string>
     <string name="lainnya">Opsi lainnya</string>
     <string name="hapus">Hapus produk</string>
@@ -21,4 +21,5 @@
     <string name="tombol_batal">Batal</string>
     <string name="list">Tampilan list</string>
     <string name="grid">Tampilan grid</string>
+    <string name="ganti_tema">Ganti tema</string>
 </resources>

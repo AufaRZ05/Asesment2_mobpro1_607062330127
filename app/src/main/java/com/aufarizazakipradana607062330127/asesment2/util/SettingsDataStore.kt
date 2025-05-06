@@ -17,6 +17,7 @@ class SettingsDataStore(private val context: Context) {
 
     companion object {
         private val IS_LIST = booleanPreferencesKey("is_list")
+        private val IS_DARK_THEME = booleanPreferencesKey("is_dark_theme")
     }
 
     val layoutFlow: Flow<Boolean> = context.dataStore.data.map { preferences ->
@@ -26,6 +27,16 @@ class SettingsDataStore(private val context: Context) {
     suspend fun saveLayout (isList: Boolean) {
         context.dataStore.edit { preferences ->
             preferences[IS_LIST] = isList
+        }
+    }
+
+    val themeFlow: Flow<Boolean> = context.dataStore.data.map { preferences ->
+        preferences[IS_DARK_THEME] ?: false
+    }
+
+    suspend fun saveTheme(isDark: Boolean) {
+        context.dataStore.edit { preferences ->
+            preferences[IS_DARK_THEME] = isDark
         }
     }
 }
