@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Kelola Produk</string>
+    <string name="app_name">Listrik Broto</string>
     <string name="list_kosong">Belum ada data</string>
     <string name="x_diklik">%1$s diklik!</string>
     <string name="tambah_produk">Tambah Produk</string>
-    <string name="nama_merek">Nama merek</string>
+    <string name="nama_merek">Nama Merek</string>
     <string name="harga">Harga</string>
     <string name="stok">Stok</string>
     <string name="kategori">Kategori</string>
@@ -15,10 +15,10 @@
     <string name="kembali">Kembali</string>
     <string name="edit_produk">Ubah Produk</string>
     <string name="invalid">nama merek, harga, stok, dan kategori tidak boleh kosong.</string>
-    <string name="hapus">Hapus produk</string>
+    <string name="hapus">Hapus Produk</string>
     <string name="lainnya">Opsi lainnya</string>
     <string name="tombol_batal">Batal</string>
-    <string name="pesan_hapus">Hapus catatan ini?</string>
+    <string name="pesan_hapus">Hapus produk ini?</string>
     <string name="tombol_hapus">Hapus</string>
     <string name="grid">Tampilan grid</string>
     <string name="list">Tampilan list</string>
